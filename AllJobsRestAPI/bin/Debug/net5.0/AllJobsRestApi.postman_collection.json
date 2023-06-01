@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "9fba5cf9-8164-4c00-bd73-0d4febd68e10",
+		"name": "AllJobsRestApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16262553",
+		"_collection_link": "https://warped-desert-616132.postman.co/workspace/WebApiPets~9f98cd0e-17db-44c8-9393-074b8ca6306d/collection/16262553-9fba5cf9-8164-4c00-bd73-0d4febd68e10?action=share&creator=16262553&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "User/Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"phoneNumber\": \"string\",\r\n  \"fullName\": \"string\",\r\n  \"userIP\": \"string\",\r\n  \"email\": \"user@exampl1.com\",\r\n  \"password\": \"111111\",\r\n  \"confirmPassword\": \"111111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:64095/User/Register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "64095",
+					"path": [
+						"User",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User/Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Bearer",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user@example6.com\",\r\n  \"password\": \"111116\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:64095/User/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "64095",
+					"path": [
+						"User",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User/GetUserDetails",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Bearer",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwibmJmIjoxNjg1NTY2MjY0LCJleHAiOjE2ODYxNzEwNjQsImlhdCI6MTY4NTU2NjI2NH0.yVKH46RpkUXbibinLGSY8d8DEzTcAVF9lV7X3TXlB1A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"phoneNumber\": \"string\",\r\n  \"fullName\": \"string\",\r\n  \"userIP\": \"string\",\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"string\",\r\n  \"confirmPassword\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:64095/User/GetUserDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "64095",
+					"path": [
+						"User",
+						"GetUserDetails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
